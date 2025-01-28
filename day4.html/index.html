@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            background-color: #f4f4f9;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .task-links {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .task-link {
+            padding: 15px 20px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        .task-link:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+        iframe {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 80%;
+            height: 400px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Task Viewer</h1>
+    <div class="task-links">
+        <a href="discount.html" class="task-link" target="taskFrame">task 1</a>
+        <a href="week.html" class="task-link" target="taskFrame">task 2</a>
+    </div>
+    <iframe name="taskFrame" title="Task Viewer"></iframe>
+</body>
+</html>

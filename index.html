@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+    .header {
+      background-color: #6200ea;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+    }
+    .task {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      border-bottom: 1px solid #ddd;
+      transition: background-color 0.3s ease;
+    }
+    .task:last-child {
+      border-bottom: none;
+    }
+    .task:hover {
+      background-color: #f0f0f0;
+    }
+    .task span {
+      font-size: 18px;
+      color: #333;
+    }
+    .task a {
+      text-decoration: none;
+      color: #6200ea;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .task a:hover {
+      color: #3700b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Task List</div>
+    <div class="task">
+      <span>Day 1</span>
+      <a href="day1.html">View Task</a>
+    </div>
+    <div class="task">
+      <span>Day 2</span>
+      <a href="day2.html">View Task</a>
+    </div>
+  </div>
+</body>
+</html>

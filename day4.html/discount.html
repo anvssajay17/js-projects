@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+
+    <script src="week.js"></script>
+  </head>
+  <body>
+    <h1>discount calculator</h1>
+    <input
+      type="text"
+      id="amount"
+      class="day-class"
+      placeholder="Enter total amount"
+    />
+    <button id="button">Submit</button>
+    <div id="discount" class="discount-class" style="display: none"></div>
+
+    <script>
+      document.getElementById("button").addEventListener("click", function () {
+        const amount = parseFloat(document.getElementById("amount").value);
+        const discount = document.getElementById("discount");
+        let disc;
+
+        if (amount < 50) {
+          disc = "You get a 5% discount";
+        } else if (amount >= 50 && amount < 100) {
+          disc = "You get a 10% discount";
+        }
+         else if (amount >= 100 && amount < 200) {
+          disc = "You get a 20% discount";
+        }
+         else if (amount >=200) {
+          disc = "free free free";
+        }
+         else {
+          disc = "No discount";
+        }
+
+        discount.textContent = disc;
+
+        discount.style.display = "block"; 
+      });
+    </script>
+  </body>
+</html>

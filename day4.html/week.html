@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week</title>
+    <style>
+        body{
+            text-align: center;
+        }
+     
+    </style>
+
+    <script src="week.js"></script>
+</head>
+<body>
+    <h1>Enter a day</h1>
+    <input type="text" id="day" class="day-class" placeholder="Enter a day">
+    <button id="button">Submit</button>
+    <div id="daymessage" class="day-message"></div>
+    
+    <script>
+        document.getElementById('button').addEventListener('click', function() {
+            const day = document.getElementById('day').value.trim().toLowerCase();
+            const daymessage = document.getElementById('daymessage');
+            let message;
+
+            switch(day) {
+                case 'monday':
+                    message = "Start your week strong 💪";
+                    break;
+                case 'tuesday':
+                    message = "Keep going 🤟";
+                    break;
+                case 'wednesday':
+                    message = "Halfway there 🤞";
+                    break;
+                case 'thursday':
+                    message = "Almost the weekend 🤏";
+                    break;
+                case 'friday':
+                    message = "Happy Friday 🙌";
+                    break;
+                case 'saturday':
+                case 'sunday':
+                    message = "Enjoy 🕺🏼";
+                    break;
+                default:
+                    message = "Please enter a valid day!";
+                    break;
+            }
+
+            daymessage.textContent = message;
+          
+            daymessage.style.display = 'block'; 
+        });
+    </script>
+</body>
+</html>
