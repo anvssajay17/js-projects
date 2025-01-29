@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>factorial</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>factorial of a number</h1>
+    <input type="text" id="numb" placeholder="enter a number" />
+    <button class="sumbit-button" id="sumbit">sumbit</button>
+    <div class="answer-class" id="answer"></div>
+
+    <script>
+      document.getElementById("sumbit").addEventListener("click", function () {
+        const numb = parseInt(document.getElementById("numb").value);
+        const answer = document.getElementById("answer");
+        answer.innerHTML = "";
+
+        if (isNaN(numb) || numb < 1) {
+          answer.style.display = "block";
+          answer.innerText = "enter a valid number";
+          return;
+        }
+
+        let factorial = [];
+        fact = 1;
+        for (i = 1; i <= numb; i++) {
+          fact = fact * i;
+        }
+        factorial.push(fact);
+        answer.style.display = "block";
+        answer.innerText = "factorial is :" + factorial.join(",");
+      });
+    </script>
+  </body>
+</html>

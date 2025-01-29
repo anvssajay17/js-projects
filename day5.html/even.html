@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even Numbers</title>
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Even Numbers</h1>
+    <input type="number" id="input" placeholder="Enter a number" />
+    <button class="sub-button" id="submit">Submit</button>
+    <div class="final-result" id="finalresult" style="display: none"></div>
+
+    <script>
+      document.getElementById("submit").addEventListener("click", function () {
+        const input = parseInt(document.getElementById("input").value);
+        const finalResult = document.getElementById("finalresult");
+
+        finalResult.innerHTML = "";
+
+        if (isNaN(input) || input < 1) {
+          finalResult.style.display = "block";
+          finalResult.innerText = "Please enter a valid positive number.";
+          return;
+        }
+
+        let evenNumbers = [];
+        for (let i = 1; i <= input; i++) {
+          if (i % 2 === 0) {
+            evenNumbers.push(i);
+          }
+        }
+
+        finalResult.style.display = "block";
+        finalResult.innerText = "Even numbers: " + evenNumbers.join(", ");
+      });
+    </script>
+  </body>
+</html>
