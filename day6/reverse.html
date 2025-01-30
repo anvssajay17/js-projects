@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .ans-box{
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>reverse a string</h1>
+    <input type="text" name="" id="word" placeholder="enter a word..">
+    <button class="sumbit-button" id="sumbit">sumbit</button>
+    <div class="ans-box" id="ans"></div>
+
+    <script>
+        document.getElementById('sumbit').addEventListener('click',function(){
+            const word = document.getElementById('word').value;
+            const ans = document.getElementById('ans');
+        
+        ans.innerHTML="";
+        let reverse = [];
+        for(i=word.length-1;i >=0;i--){
+            reverse += word[i];
+        }
+       
+        ans.style.display="block";
+        ans.innerText = "reverse of a stirng is :"+ reverse;
+            
+        })
+    </script>
+</body>
+
+</html>
