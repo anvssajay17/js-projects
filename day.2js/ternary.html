@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary operator</title>
+</head>
+<body>
+    <script>
+         let num = 23;
+         let check = num%2 == 0 ? 'even' :'odd';
+         console.log(check)
+
+        //  18 or less checking using ternary operator
+        let age = 17;
+        let qualify = age >=18? 'eligible' :'not eligible'
+        console.log(qualify)
+
+
+        // temp using ternary operators
+
+        let temp= 45;
+        let tempcheck = temp>30 ?"hot":
+                        temp<=30 &&temp >20 ?"warm":
+                        temp<=20 &&temp >10 ?"cool":
+                        temp<=10 ?"cold":'enter a vallid value'
+                        console.log(tempcheck)
+        
+         
+        // grades using ternary operators
+        let mark= 50;
+        let markscheck = mark<=35 && mark>0 ?"p":
+                        mark<=50 &&mark >35?"avg":
+                        mark<=70 &&mark >50 ?"good":
+                        mark<=100 ?"super":'enter a vallid marks'
+                        console.log(markscheck)
+        </script>
+
+</body>
+</html>
